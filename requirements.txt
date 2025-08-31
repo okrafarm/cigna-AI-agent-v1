@@ -1,0 +1,27 @@
+# Core dependencies
+asyncio-throttle==1.0.2
+python-dotenv==1.0.0
+aiofiles==23.2.0
+pydantic==2.5.0
+
+# WhatsApp integration
+twilio==8.11.0
+
+# Web automation
+playwright==1.40.0
+
+# Document processing and OCR
+Pillow==10.1.0
+pytesseract==0.3.10
+pdf2image==1.16.3
+openai==1.6.0
+
+# Data handling
+pandas==2.1.4
+sqlite3  # Built-in, no need to install
+
+# Logging and monitoring
+loguru==0.7.2
+
+# HTTP client
+httpx==0.25.2
