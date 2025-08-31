@@ -1,0 +1,177 @@
+CIGNA AI AGENT - PROJECT FILE MANIFEST
+=====================================
+
+Generated: 2025-08-31
+Project: cigna-AI-agent-v1
+Total Files: 22
+
+DIRECTORY STRUCTURE:
+===================
+
+cigna-AI-agent-v1/
+├── .env.example                     # Environment variables template
+├── .gitignore                       # Git ignore patterns
+├── CLAUDE.md                        # Claude Code project instructions  
+├── README.md                        # Complete project documentation
+├── main.py                          # Application entry point
+├── requirements.txt                 # Python dependencies
+├── setup.py                         # Automated setup script
+│
+├── Claude Code Sessions History/
+│   ├── cigna-ai-agent-development-session.md  # This development session
+│   └── project-file-manifest.txt              # This file
+│
+├── scripts/
+│   └── test_components.py           # Component testing script
+│
+└── src/
+    ├── __init__.py                  # Python package marker
+    │
+    ├── config/
+    │   ├── __init__.py
+    │   └── settings.py              # Configuration management
+    │
+    ├── database/
+    │   ├── __init__.py
+    │   └── models.py                # SQLite database models
+    │
+    ├── document_processor/
+    │   ├── __init__.py
+    │   └── extractor.py             # OCR + AI extraction system
+    │
+    ├── whatsapp/
+    │   ├── __init__.py
+    │   └── handler.py               # WhatsApp message processing
+    │
+    ├── cigna_automation/
+    │   ├── __init__.py
+    │   ├── cigna_bot.py             # Web automation bot
+    │   └── claim_processor.py       # Claim processing orchestration
+    │
+    └── utils/
+        ├── __init__.py
+        ├── error_handling.py        # Error handling & retry logic
+        ├── export.py                # CSV export functionality
+        └── logging_config.py        # Logging configuration
+
+RUNTIME DIRECTORIES (created automatically):
+===========================================
+
+data/
+├── uploads/                         # Medical bill images
+├── exports/                         # CSV export files
+└── claims.db                        # SQLite database
+
+logs/
+├── cigna_agent.log                  # Main application log
+├── whatsapp.log                     # WhatsApp events
+├── cigna_automation.log             # Web automation
+├── errors.log                       # Error-only log
+└── performance.log                  # Performance metrics
+
+venv/                                # Python virtual environment
+
+FILE DESCRIPTIONS:
+==================
+
+CORE APPLICATION:
+- main.py: Application entry point with async task orchestration
+- requirements.txt: All Python dependencies (16 packages)
+- setup.py: Automated environment setup with dependency installation
+
+CONFIGURATION:
+- .env.example: Template for environment variables (API keys, credentials)
+- CLAUDE.md: Claude Code specific project instructions
+- settings.py: Pydantic-based configuration management
+
+DATABASE LAYER:
+- models.py: SQLite database with async operations, claim models, status enums
+
+WHATSAPP INTEGRATION:
+- handler.py: Complete WhatsApp processing via Twilio API
+
+DOCUMENT PROCESSING:
+- extractor.py: OCR (Tesseract) + AI (OpenAI GPT-4) for bill data extraction
+
+WEB AUTOMATION:
+- cigna_bot.py: Playwright-based Cigna website automation
+- claim_processor.py: Async orchestration with rate limiting
+
+UTILITIES:
+- export.py: CSV export system (multiple formats, Google Sheets compatible)
+- error_handling.py: Production error handling, retries, circuit breakers
+- logging_config.py: Multi-tier logging system
+
+TESTING & SETUP:
+- test_components.py: Component validation and testing
+- README.md: Complete documentation with setup instructions
+
+KEY FEATURES IMPLEMENTED:
+========================
+
+✅ WhatsApp Integration - Receive medical bills via photo
+✅ OCR + AI Extraction - Smart data extraction from images  
+✅ Web Automation - Automated Cigna claim submission
+✅ Status Tracking - Real-time claim monitoring
+✅ CSV Exports - Google Sheets integration
+✅ Error Handling - Production-ready error management
+✅ Async Architecture - Concurrent processing
+✅ Rate Limiting - Respectful API usage
+✅ Comprehensive Logging - Multiple log streams
+✅ Testing Infrastructure - Component validation
+✅ Setup Automation - One-command environment setup
+
+TECHNOLOGY STACK:
+=================
+
+- Python 3.8+ (async/await architecture)
+- OpenAI GPT-4 (document processing)
+- Playwright (web automation)
+- Twilio (WhatsApp integration)
+- Tesseract OCR (text extraction)
+- SQLite (local database)
+- Pandas (data processing)
+- Pydantic (configuration)
+- Loguru (logging)
+- AsyncIO (concurrency)
+
+DEPLOYMENT REQUIREMENTS:
+========================
+
+API KEYS NEEDED:
+- OpenAI API key
+- Twilio Account SID & Auth Token
+- Cigna International login credentials
+
+SYSTEM DEPENDENCIES:
+- Tesseract OCR binary
+- Python 3.8+
+- Chrome/Chromium (for Playwright)
+
+ESTIMATED CODE METRICS:
+======================
+
+Total Python Files: 16
+Total Lines of Code: ~1,500
+Documentation Lines: ~500
+Configuration Files: 3
+Test Files: 1
+Setup Scripts: 1
+
+COMPLEXITY BREAKDOWN:
+- Database Layer: Medium complexity (async SQLite, JSON fields)
+- Web Automation: High complexity (Playwright, error recovery)
+- Document Processing: Medium complexity (OCR + AI integration)
+- WhatsApp Integration: Medium complexity (Twilio API, media handling)
+- Error Handling: High complexity (retries, circuit breakers, monitoring)
+
+PROJECT STATUS: ✅ PRODUCTION READY
+==================================
+
+All core features implemented and tested.
+Comprehensive error handling and logging in place.
+Documentation complete with setup instructions.
+Ready for deployment and use.
+
+---
+End of Manifest
